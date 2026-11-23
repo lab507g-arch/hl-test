@@ -1,0 +1,9 @@
+name: hl-connectivity-test
+on: workflow_dispatch  # manual button only, no schedule
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 test_hl.py
